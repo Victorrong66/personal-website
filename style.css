@@ -1,0 +1,268 @@
+/* Variable */
+:root {
+    --navy: #0b1120;
+    --navy2: #111827;
+    --slate: #1e2a3b;
+    --border: #263347;
+    --gold: #c9a84c;
+    --gold2: #e8c97a;
+    --text: #e9eef5;
+    --muted: #7a8fa8;
+    --light: #b8cce0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--navy);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* Nav */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 48px;
+    background: rgba(11, 17, 32, 0.85);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--gold2);
+}
+
+/* Hero */
+.hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 120px 80px 80px;
+    gap: 60px;
+}
+
+.hero-eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+}
+
+.hero-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 80px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+}
+
+.hero-title {
+    font-size: 16px;
+    color: var(--gold2);
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.hero-bio {
+    font-size: 16px;
+    color: var(--light);
+    line-height: 1.8;
+    max-width: 480px;
+    margin-bottom: 40px;
+}
+
+.hero-action-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 13px 28px;
+    border-radius: 2px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    border: 1px solid var(--gold);
+}
+
+.btn-primary:hover {
+    background: var(--gold2);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+/* Profile Card */
+.profile-card {
+    background: var(--slate);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold2), transparent);
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: var(--navy2);
+    border: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.profile-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.profile-role {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 24px;
+}
+
+.profile-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.stat {
+    background: var(--navy2);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-value {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    color: var(--gold);
+}
+
+.stat-label {
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.profile-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 2px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+}
+
+.tag-gold {
+    border-color: rgba(201, 168, 76, 0.4);
+    color: var(--gold2);
+    background: rgba(201, 168, 76, 0.07);
+}
