@@ -266,3 +266,70 @@ nav {
     color: var(--gold2);
     background: rgba(201, 168, 76, 0.07);
 }
+
+section {
+    padding: 100px 80px;
+    border-top: 1px solid var(--border);
+}
+
+.section-label {
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 11px;
+    color: var(--gold);
+}
+
+.section-label::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+    display: inline-block;
+}
+
+.section-title {
+    font-family: 'DM Serif Display', serif;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 48px;
+    font-size: 48px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: var(--light);
+    line-height: 1.85;
+    margin-bottom: 18px;
+}
+
+.about-aside {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-row {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background-color: var(--slate);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 16px 20px;
+    transition: border-color 0.2s;
+}
+
+.info-row:hover{
+    border-color:rgba(201, 168, 76, 0.3)
+}
