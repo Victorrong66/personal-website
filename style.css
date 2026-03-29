@@ -644,3 +644,31 @@ footer {
     font-size: 13px;
     color: var(--muted);
 }
+
+/* Mobile Devices CSS Responsiveness */
+
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 60px 24px;
+    }
+}
