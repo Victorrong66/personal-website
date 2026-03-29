@@ -498,3 +498,149 @@ section {
     color: var(--light);
     line-height: 1.75;
 }
+
+/* Projects */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.project-card-placeholder {
+    background: var(--slate);
+    border: 1px dashed var(--border);
+    border-radius: 4px;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+    opacity: 0.6;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.project-card-placeholder:hover {
+    border-color: rgba(201, 168, 76, 0.3);
+    transform: translateY(-3px);
+}
+
+.project-number {
+    font-family: 'DM Serif Display', serif;
+    font-size: 48px;
+    color: rgba(201, 168, 76, 0.12);
+    line-height: 1;
+    position: absolute;
+    top: 20px;
+    right: 24px;
+}
+
+.project-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+}
+
+.project-description {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.stack-tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 3px 8px;
+    border-radius: 2px;
+}
+
+/* Contacts */
+
+.contact-introduction {
+    font-size: 16px;
+    color: var(--light);
+    margin-bottom: 32px;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-link {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background: var(--slate);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 18px 24px;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.contact-link:hover {
+    border-color: var(--gold);
+    background: rgba(201, 168, 76, 0.04);
+}
+
+.contact-icon {
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.contact-types {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 2px;
+}
+
+.contact-value {
+    font-size: 15px;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.contact-arrow {
+    margin-left: auto;
+    color: var(--muted);
+    font-size: 18px;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.contact-link:hover .contact-arrow{
+    transform: translateX(4px);
+    color: var(--gold);
+}
+
+/* Footer */
+
+footer {
+    padding: 32px 80px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    font-family: 'DM Serif Display', serif;
+    color: var(--gold);
+    font-size: 18px;
+}
+
+.footer-copy {
+    font-size: 13px;
+    color: var(--muted);
+}
