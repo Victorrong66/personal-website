@@ -508,6 +508,9 @@ section {
 }
 
 .project-card-placeholder {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     background: var(--slate);
     border: 1px dashed var(--border);
     border-radius: 4px;
@@ -548,7 +551,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-    margin-top: 12px;
+    margin-top: auto; /* Allows the stack tags to be on the same line for each tag in each project box
 }
 
 .stack-tag {
