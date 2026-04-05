@@ -508,9 +508,6 @@ section {
 }
 
 .project-card-placeholder {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
     background: var(--slate);
     border: 1px dashed var(--border);
     border-radius: 4px;
@@ -551,7 +548,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-    margin-top: auto; /* Allows the stack tags to be on the same line for each tag in each project box */
+    margin-top: 12px;
 }
 
 .stack-tag {
@@ -655,8 +652,18 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    nav {
+        padding: 16px 24px;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
     .nav-links {
-        display: none;
+        gap: 16px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
     }
 
     .about-grid {
